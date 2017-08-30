@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mosaic</title>
+
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+
+  </head>
+  <body>
+    <div class="input-box show">
+
+      <button id="reset-button">
+        <i class="material-icons">refresh</i>
+      </button>
+      <button id="min-button">
+        <i class="material-icons clear">remove</i>
+      </button>
+
+      <div class="image-box">
+        <div class="image-input">
+          <p>Drag and Drop</p>
+          <p>or Click Here</p>
+          <span>To Upload An Image</span>
+          <div class="error"></div>
+          <input class="file-input" type="file" accept="image/x-png,image/jpeg" >
+        </div>
+
+        <img class="preview-image hide">
+      </div>
+    </div>
+
+    <main class="wrapper">
+      <canvas id="canvas" width="300" height="300"></canvas>
+      <canvas id="offcanvas" width="300" height="300"></canvas>
+    </main>
+
+    <script type="text/javascript" src="js/components/DragDrop/DragDrop.js"></script>
+    <script type="text/javascript" src="js/components/ImageInput/ImageInput.js"></script>
+    <script type="text/javascript" src="js/components/PreviewImage/PreviewImage.js"></script>
+    <script type="text/javascript" src="js/utils/Mosaicer.js"></script>
+    <script type="text/javascript" src="js/utils/Uploader.js"></script>
+    <script type="text/javascript" src="js/mosaic.js"></script>
+  </body>
+</html>

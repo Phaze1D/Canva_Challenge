@@ -1,0 +1,43 @@
+.input-box {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  z-index: 100;
+  width: 300px;
+  min-height: 200px;
+  background-color: #3f4652;
+  border-radius: 2px;
+  padding: 5px;
+  clip-path: circle(16px at 21px 21px);
+
+  display: grid;
+  grid-template-columns: 34px 1fr 1fr 1fr 34px;
+  grid-template-rows: 34px 4fr;
+  grid-gap: 5px;
+  grid-template-areas: "min . . . reset"
+                          "imageInput imageInput imageInput imageInput imageInput";
+  transition: clip-path 0.2s ease-in;
+  will-change: clip-path;
+}
+  
+.input-box.show {
+  clip-path: circle(135% at 32px 22px);
+}
+
+.input-box.show .clear {
+  transform: rotate(0deg);
+}
+
+.clear {
+  will-change: transform;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease-in;
+}
+
+#reset-button {
+  grid-area: reset;
+}
+
+#min-button {
+  grid-area: min;
+}
